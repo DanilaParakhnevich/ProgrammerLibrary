@@ -112,8 +112,8 @@ void MainWNDAddWidgets(HWND hWnd) {
 		NULL, NULL, NULL, NULL);
 	CreateWindowA("button", "Поиск", WS_VISIBLE | WS_CHILD, 163, 55, 60, 20, hWnd,
 		(HMENU)ButtonToSend, NULL, NULL, NULL);
-	responce = CreateWindowA("static", "",
-		WS_VISIBLE | WS_CHILD | ES_LEFT | WS_BORDER | WS_VSCROLL,
+	responce = CreateWindowA("edit", "",
+		WS_VISIBLE | WS_CHILD | WS_BORDER | WS_VSCROLL | ES_MULTILINE,
 		5, 80,
 		480, 300,
 		hWnd, NULL, NULL, NULL, NULL);
