@@ -32,9 +32,12 @@ string getResult(HWND hWnd) {
 	int number = 1;
 	for (size_t i = 0; i < allText.size(); ++i) {
 		if (isSuitable(allText.at(i), request)) {
-			responce += to_string(number) + ". " + allText.at(i) + '\n';
+			responce += to_string(number) + ". " + allText.at(i) + "\r\n";
 			++number;
 		}
+	}
+	if (responce == "") {
+		return "Ничего не найдено";
 	}
 	return responce;
 }
